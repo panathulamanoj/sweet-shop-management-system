@@ -11,10 +11,6 @@ const sweetschema= new schema(
             type:Number,
             required:true
         },
-        description:{
-            type:String,
-            required:true
-        },
         quantity:{
             type:Number,
             required:true
