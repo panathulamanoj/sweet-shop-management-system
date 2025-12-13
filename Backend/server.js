@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
 import User from "./models/Usersch.js";
 import bcrypt from "bcrypt";
 import { authenticate, isAdmin } from "./middleware/auth.js";
-
+import cors from 'cors';
 import dotenv from "dotenv";
 dotenv.config();
 const dburl=process.env.db_Url || 'mongodb://localhost:27017/yelp-camp';
@@ -26,6 +26,12 @@ app.listen(port,()=>{
 
 
 app.use(express.json());
+// app.use(cors({
+//   origin: "http://localhost:5173",
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"]
+// }));
+app.use(cors());
 
 
 
