@@ -153,15 +153,15 @@ Screenshots
 
 ###My AI Usage:
 
-1.I used AI assistance (ChatGPT) for:
+I used AI assistance (ChatGPT) for:
 
-2.UI styling (forms, buttons, navbar, responsive design)
+1.UI styling (forms, buttons, navbar, responsive design)
 
-3.Deployment guidance for Netlify (Vite + React Router configuration)
+2.Deployment guidance for Netlify (Vite + React Router configuration)
 
-4.Troubleshooting frontend and backend integration issues
+3.Troubleshooting frontend and backend integration issues
 
-5.Brainstorming authentication,authorization design using jwt
+4.Brainstorming authentication,authorization design using jwt
 
 Test Report
 
