@@ -20,8 +20,8 @@ The Sweet Shop Management System provides a simple and user-friendly interface f
 
 ### 🔐 User Authentication
 - Users can **register** with valid credentials.
-- Registered users can **log in securely** using JWT-based authentication.
-- Authentication ensures that only authorized users can place orders.
+- Registered users can **log in securely**
+- Authentication ensures that only authorized users can  purchase sweets
 
 ### 🍬 Browse Sweets
 - Users can view a list of available sweets with:
@@ -48,7 +48,6 @@ The Sweet Shop Management System provides a simple and user-friendly interface f
 ### ⏳ Backend Cold Start Handling
 - The backend is hosted on a free-tier service (Render).
 - On the **first request**, the server may take up to **60 seconds** to respond due to cold start.
-- The UI clearly informs users about this delay to avoid confusion.
 
 ### 📱 Responsive User Interface
 - The application is fully responsive.
@@ -57,10 +56,6 @@ The Sweet Shop Management System provides a simple and user-friendly interface f
   - Tablet
   - Mobile devices
 
-### 🚀 Seamless User Experience
-- Clean navigation using React Router
-- Smooth form interactions
-- Clear loading and error messages
 
 This system ensures an intuitive and reliable experience for end users while maintaining data consistency and performance.
 
