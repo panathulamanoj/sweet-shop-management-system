@@ -1,7 +1,9 @@
 import {useState} from 'react';
 import api from "../api/axios";
+import { useNavigate } from "react-router-dom";
 export default function()
 {
+    const navigate = useNavigate();
     const [username,setusername] =useState("");
     const [password,setpassword] =useState("");
     const handlelogin =async(e)=>{
@@ -18,12 +20,14 @@ export default function()
       localStorage.setItem("token", token);
 
       alert("Login successful");
+       return navigate("/", { replace: true });
+
     } catch (err) {
       alert("Invalid credentials");
     }
     }
     return(
-        <form className="formrl">
+        <form className="formrl" onSubmit={handlelogin}>
         <div className="formwrap">
         <label htmlFor="unameform">Username</label>
         <input id="unameform" type="text" value={username} onChange={(evt)=>(setusername(evt.target.value))} required />    
@@ -32,7 +36,7 @@ export default function()
         <label htmlFor="passform">Password</label>
         <input id="passform" type="text" value={password} onChange={(evt)=>(setpassword(evt.target.value))} required />
         </div>
-        <button type="submit" onClick={handlelogin}>Login</button>
+        <button type="submit" >Login</button>
         </form>
     );
 }

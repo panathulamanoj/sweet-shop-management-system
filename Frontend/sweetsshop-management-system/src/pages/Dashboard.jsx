@@ -5,6 +5,7 @@ import Sweetcard from '../components/Sweetcard.jsx';
 import Slider from "@mui/material/Slider";
 export default function()
 {
+    const [loading, setLoading] = useState(true);
     const [value, setValue] = useState([0, 100]);
     const [sweets,setsweets] = useState([]);
     const token = localStorage.getItem("token");
@@ -13,6 +14,7 @@ export default function()
     //re-fetches all available sweets from database
     async function frender()
     {
+      setLoading(true);
       console.log("frender called");
       try{
    const res = await api.get("/api/sweets");
@@ -22,6 +24,7 @@ export default function()
       {
         alert("failed to fetch data your session might be expired");
       }
+      setLoading(false);
     }
     //handles purchase of sweet 
     const handlepurchase=async(obj)=>{
@@ -103,6 +106,7 @@ export default function()
       </div>
         </form>
         <div className="sweetsContdboard">
+          {loading && <h1>...loading</h1>}
           {
           sweets.map((sweet)=>{
           return <Sweetcard key={sweet._id} sweet={sweet} handlepurchase={handlepurchase} />

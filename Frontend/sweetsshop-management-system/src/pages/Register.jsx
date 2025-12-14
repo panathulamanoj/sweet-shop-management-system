@@ -1,7 +1,9 @@
 import {useState} from 'react';
 import api from "../api/axios";
+import { useNavigate } from "react-router-dom";
 export default function ()
 {
+    const navigate = useNavigate();
     const [username,setusername] =useState("");
     const [password,setpassword] =useState("");
     const [role, setRole] = useState("user");
@@ -15,6 +17,7 @@ export default function ()
           });
           //message recieved from backend response after successfully login
           alert("register successful");
+          return navigate("/login", { replace: true });
         } catch (err) {
             console.log(err);
           alert("Invalid credentials");

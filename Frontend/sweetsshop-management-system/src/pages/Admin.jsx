@@ -1,11 +1,12 @@
 import { jwtDecode } from "jwt-decode";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import api from "../api/axios";
 import {useState,useEffect} from 'react';
 import Sweetcard from '../components/Sweetcard.jsx';
 import NewSweet from '../components/NewSweet.jsx';
 export default function()
 {
+    const navigate = useNavigate();
     const [sweets,setsweets] = useState([]);
     const token = localStorage.getItem("token");
         let role = null;
@@ -14,14 +15,18 @@ export default function()
             // ADMIN or USER
             role = decoded.role; 
            }
-     if (role=="user") {
-        alert("Only admins can access the Admin page");
-        return <Navigate to="/dashboard" replace />;
-      }
-      else if(!token){
-        alert("login to access admin page");
-        return <Navigate to="/login" replace />
-      }
+        useEffect(() => {
+    if (!token) {
+      alert("Login to access admin page");
+      navigate("/login", { replace: true });
+    } else if (role === "user") {
+      alert("Only admins can access the Admin page");
+      navigate("/", { replace: true });
+    }
+  }, [token, role, navigate]);
+
+  // stop rendering until auth check completes
+  if (!token || role === "user") return null;
       //handles adding of new sweet to database
       const newsweet =async(body)=>{
         console.log("newsweet function called");
