@@ -3,7 +3,7 @@
 
 ###***Backend-api-url:https://sweet-shop-management-system-n6ho.onrender.com/***
 
-###***FrontEnd-webapp-url:https://sweet-shop-management-system-n6ho.onrender.com/***
+###***FrontEnd-webapp-url:https://sweetsshopmanagementsystem.netlify.app/***
 
 ⚠️ **IMPORTANT:** Backend uses Render free tier. First request may take ~60 seconds.
 
