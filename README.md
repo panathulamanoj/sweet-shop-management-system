@@ -4,6 +4,7 @@
 ###***Backend-api-url:https://sweet-shop-management-system-n6ho.onrender.com/***
 
 ###***FrontEnd-webapp-url:https://sweet-shop-management-system-n6ho.onrender.com/***
+
 ⚠️ **IMPORTANT:** Backend uses Render free tier. First request may take ~60 seconds.
 
 Open backend URL once before accessing frontend,when it says api ready then you can access frontend-url and avoid cold start for first request
@@ -13,6 +14,56 @@ Open backend URL once before accessing frontend,when it says api ready then you 
 A full-stack web application to manage sweets inventory and allow users to purchase sweets online. Admins can edit, delete, and restock sweets. The project uses React + Vite for the frontend, Node.js + Express for the backend, and MongoDB as the database.
 
 ---
+## 👤 User Functionality – Sweet Shop Management System
+
+The Sweet Shop Management System provides a simple and user-friendly interface for customers to browse and purchase sweets, while ensuring smooth interaction with the backend services.
+
+### 🔐 User Authentication
+- Users can **register** with valid credentials.
+- Registered users can **log in securely** using JWT-based authentication.
+- Authentication ensures that only authorized users can place orders.
+
+### 🍬 Browse Sweets
+- Users can view a list of available sweets with:
+  - Sweet name
+  - Category
+  - Price
+  - Available quantity
+- Sweets are displayed in a clean, responsive card-based layout.
+
+### 🔍 Search & Filter
+- Users can:
+  - Search sweets by name
+  - Filter sweets by category
+  - Filter sweets by price range using a slider
+- These filters help users quickly find their desired items.
+
+### 🛒 Purchase Sweets
+- Users can select the **quantity** of sweets they want to purchase.
+- The system automatically prevents purchases if the selected sweet is out of stock.
+- On successful purchase:
+  - Inventory quantity is updated
+  - User receives immediate feedback
+
+### ⏳ Backend Cold Start Handling
+- The backend is hosted on a free-tier service (Render).
+- On the **first request**, the server may take up to **60 seconds** to respond due to cold start.
+- The UI clearly informs users about this delay to avoid confusion.
+
+### 📱 Responsive User Interface
+- The application is fully responsive.
+- Works smoothly on:
+  - Desktop
+  - Tablet
+  - Mobile devices
+
+### 🚀 Seamless User Experience
+- Clean navigation using React Router
+- Smooth form interactions
+- Clear loading and error messages
+
+This system ensures an intuitive and reliable experience for end users while maintaining data consistency and performance.
+
 
 ## Technologies Used
 
@@ -86,8 +137,24 @@ Frontend will run at http://localhost:5173 (Vite default)
 
 Screenshots
 
+###users ui
 
+![img alt](https://github.com/panathulamanoj/sweet-shop-management-system/blob/master/Screenshot%202025-12-14%20001027.png)
 
+###login ui
+
+![img alt](https://github.com/panathulamanoj/sweet-shop-management-system/blob/master/Screenshot%202025-12-14%20001042.png)
+
+###register ui
+
+![img alt](https://github.com/panathulamanoj/sweet-shop-management-system/blob/master/Screenshot%202025-12-14%20001052.png
+)
+
+###admin ui
+
+![img alt](https://github.com/panathulamanoj/sweet-shop-management-system/blob/master/Screenshot%202025-12-14%20001209.png)
+
+![img alt](https://github.com/panathulamanoj/sweet-shop-management-system/blob/master/Screenshot%202025-12-14%20001220.png)
 
 ###My AI Usage:
 
